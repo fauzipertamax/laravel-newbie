@@ -1,0 +1,8 @@
+1. Belajar dari https://www.malasngoding.com/pengertian-dan-cara-install-laravel/
+2. Install composer (baca di https://www.malasngoding.com/cara-install-composer/) sesuaikan denga path xampp/php/php.exe
+3. Selesai install composer, buka command prompt lalu ketikan c:\users\hp\composer... jika muncul informasi composer,, installasi composer berhasil
+4. Install aplikasi laravel menggunakan command prompt
+5. Masuk ke directory yang akan diinstall cd C:\XAMPP/htdocs/
+6. kemudian ketikkan perintah berikut : composer create-project --prefer-dist laravel/laravel app_laravel (untuk membuat project)
+7. Untuk menjalankan aplikasi bisa langsung menggunakan web server yang ada dengan menuliskan localhost/app_laravel/public
+8. atau menggunakan php artisan serve localhost:8080 (jka ada dua php artisan, maka yang pertama up yang diakses)

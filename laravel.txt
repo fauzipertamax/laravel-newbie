@@ -1,0 +1,51 @@
+malasngoding.com
+
+Tutorial Laravel #1 : Pengertian dan Cara Install Laravel
+	1. Install Composer :  (https://www.malasngoding.com/cara-install-composer/)
+	2. Create Project  : dengan Command Prompt ke folder project lalu ketikan composer create-project --prefer-dist laravel/laravel belajar_laravel
+	3. Test Running Aplikasi : dengan Command Prompt ke folder project lalu ketikan php artisan serve
+	
+Tutorial Laravel #2 : Belajar Route dan View Pada Laravel
+	1. Mengatur routes di file routes/web.php
+	2. Selain view, routes juga bisa mengembalikan string
+	3. Membuat route baru 
+		Route::get('halo', function () {
+			return "Halo, Selamat datang di tutorial laravel www.malasngoding.com";
+		});
+		
+		Route::get('blog', function () {
+			return view('blog');
+		});
+	4. Membuat view di foder resources/views
+	
+Tutorial Laravel #3 : Membuat Controller Pada Laravel
+	1. Controller berada di app/Http/Controllers
+	2. Ada dua cara untuk membuat controller
+		- Langsung membuat Controller di folder app/Http/Controllers
+		- Menggunakan php artisan make:controller DosenController
+	3. Menggunakan Controller dari route : Route::get('dosen', 'DosenController@index'); #index = nama function
+
+Tutorial Laravel #4 : Passing Data Controller Ke View Laravel
+	1. Passing data adalah mengoper data dari Controller ke View
+	2. Cara sebenarnya adalah memanggil view dari controller
+	3. Di Controller : return view ('biodata',['namaku' => $nama]);
+	4. Di View : <p>Nama : {{ $namaku }}</p>
+	
+Tutorial Laravel #5 : Request Data Pada Laravel
+	1. Ada dua request pada laravel
+		- Penerimaan Data melalui URI ==> Route::get('/pegawai/{nama}','PegawaiController@index');
+		- Penerimaan Data melalui input ==> $nama = $request->input('nama');
+
+Tutorial Laravel #6 : Maintenance Mode Pada Laravel
+	1. Maintenance ==> php artisan down
+	2. Normal kembali ==> php artisan up
+
+Tutorial Laravel #7 : Konfigurasi Dasar Pada Laravel
+	1. Environmental Configuration ( .env)
+	2. Konfigurasi laravel terdapat pada folder config secara terpisah-pisah
+	3. Konfigurasi di .env lebih diutamakan
+
+Tutorial Laravel #8 : Sistem Template Blade Laravel
+	1. @yield() ==> berguna untuk bagian-bagian tertentu pada template website
+	2. @extends() ==> untuk menghubungkan ke master template
+	3. @section() ==> isi yang akan di tampilkan pada @yield()
